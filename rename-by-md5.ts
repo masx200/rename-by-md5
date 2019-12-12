@@ -1,3 +1,7 @@
+"use strict";
+process.on("unhandledRejection", err => {
+  throw err;
+});
 import find from "find";
 import fs from "fs";
 import md5file from "md5-file";
@@ -15,7 +19,6 @@ function md5FileAsPromised(filename: string): Promise<string> {
   });
 }
 const fspromise = fs.promises;
-// console.log([find, md5file, fspromise]);
 
 function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
   return new Promise((s, j) => {
@@ -50,4 +53,3 @@ function start(extention: string, dirpa: string) {
   });
 }
 start(extention, dirpa);
-// export { start };

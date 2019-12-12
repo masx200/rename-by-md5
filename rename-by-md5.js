@@ -1,3 +1,7 @@
+"use strict";
+process.on("unhandledRejection", err => {
+    throw err;
+});
 import find from "find";
 import fs from "fs";
 import md5file from "md5-file";
