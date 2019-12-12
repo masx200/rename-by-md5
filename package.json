@@ -19,6 +19,11 @@
   },
   "devDependencies": {},
   "keywords": [],
-  "author": "",
-  "description": ""
+  "author": "masx200 <34191203+masx200@users.noreply.github.com>",
+  "description": "批量使用文件的md5值给文件重命名",
+  "repository": "git+https://github.com/masx200/rename-by-md5.git",
+  "bugs": {
+    "url": "https://github.com/masx200/rename-by-md5/issues"
+  },
+  "homepage": "https://github.com/masx200/rename-by-md5#readme"
 }
