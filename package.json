@@ -1,4 +1,6 @@
 {
+  "type": "module",
+  "types": "rename-by-md5.ts",
   "name": "@masx200/rename-by-md5",
   "version": "1.0.0",
   "main": "rename-by-md5.ts",
