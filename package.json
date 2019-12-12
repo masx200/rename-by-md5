@@ -1,0 +1,22 @@
+{
+  "name": "@masx200/rename-by-md5",
+  "version": "1.0.0",
+  "main": "rename-by-md5.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./"
+  },
+  "dependencies": {
+    "@types/find": "^0.2.1",
+    "@types/md5-file": "^4.0.0",
+    "@types/node": "^12.12.17",
+    "find": "^0.3.0",
+    "md5-file": "^4.0.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "description": ""
+}
