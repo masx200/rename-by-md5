@@ -19,3 +19,9 @@
   "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp"
 ];
 ```
+
+运行脚本
+
+```
+yarn run start
+```
