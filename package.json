@@ -6,7 +6,8 @@
   "main": "rename-by-md5.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && node ./rename-by-md5.js"
+"build":"tsc",
+    "start": " node ./rename-by-md5.js --experimental-modules"
   },
   "dependencies": {
     "@types/find": "^0.2.1",
