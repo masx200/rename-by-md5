@@ -30,8 +30,7 @@ function findfiles(pattern, root) {
         });
     });
 }
-const extention = "webp";
-const dirpa = "D:\\baidupandownload";
+import renameconfig from "./rename-config.js";
 function start(extention, dirpa) {
     const extreg = new RegExp("." + extention + "$");
     const dirpath = path.resolve(dirpa);
@@ -51,4 +50,4 @@ function start(extention, dirpa) {
         });
     });
 }
-start(extention, dirpa);
+start(renameconfig.extention, renameconfig.dir);

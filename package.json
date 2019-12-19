@@ -2,12 +2,12 @@
   "type": "module",
   "types": "rename-by-md5.ts",
   "name": "@masx200/rename-by-md5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "rename-by-md5.js",
   "license": "MIT",
   "scripts": {
-"build":"tsc",
-    "start": " node ./rename-by-md5.js --experimental-modules"
+    "build": "tsc",
+    "start": " node ./rename-by-md5.js --experimental-modules --experimental-json-modules"
   },
   "dependencies": {
     "@types/find": "^0.2.1",

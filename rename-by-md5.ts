@@ -31,8 +31,9 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
       });
   });
 }
-const extention = "webp";
-const dirpa = "D:\\baidupandownload";
+// const extention = "webp";
+// const dirpa = "D:\\baidupandownload";
+import renameconfig from "./rename-config.js";
 function start(extention: string, dirpa: string) {
   const extreg = new RegExp("." + extention + "$");
   const dirpath = path.resolve(dirpa);
@@ -52,4 +53,4 @@ function start(extention: string, dirpa: string) {
     });
   });
 }
-start(extention, dirpa);
+start(renameconfig.extention, renameconfig.dir);
