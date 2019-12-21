@@ -60,7 +60,11 @@ async function start(extention: string, dirpa: string) {
     });
   });
 }
-loadjson("./rename-config.json").then(renameconfig => {
+interface RENAMECONFIG {
+  extention: string;
+  dir: string;
+}
+loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
   console.log(renameconfig);
   start(renameconfig.extention, renameconfig.dir);
 });

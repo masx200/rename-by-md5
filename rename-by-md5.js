@@ -56,7 +56,7 @@ async function start(extention, dirpa) {
         });
     });
 }
-loadjson("./rename-config.json").then(renameconfig => {
+loadjson("./rename-config.json").then((renameconfig) => {
     console.log(renameconfig);
     start(renameconfig.extention, renameconfig.dir);
 });
