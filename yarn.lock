@@ -7,10 +7,22 @@
   resolved "https://registry.npm.taobao.org/@types/find/download/@types/find-0.2.1.tgz#e8d0d7a952be2d90768d6f8dd7f2e6630bb260f8"
   integrity sha1-6NDXqVK+LZB2jW+N1/LmYwuyYPg=
 
+"@types/fs-extra@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.npm.taobao.org/@types/fs-extra/download/@types/fs-extra-8.0.1.tgz#a2378d6e7e8afea1564e44aafa2e207dadf77686"
+  integrity sha1-ojeNbn6K/qFWTkSq+i4gfa33doY=
+  dependencies:
+    "@types/node" "*"
+
 "@types/md5-file@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/@types/md5-file/download/@types/md5-file-4.0.0.tgz#01c986144648a757ac6e7ada665fa665c253289d"
   integrity sha1-AcmGFEZIp1esbnraZl+mZcJTKJ0=
+
+"@types/node@*":
+  version "12.12.21"
+  resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-12.12.21.tgz?cache=0&sync_timestamp=1576680040236&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-12.12.21.tgz#aa44a6363291c7037111c47e4661ad210aded23f"
+  integrity sha1-qkSmNjKRxwNxEcR+RmGtIQre0j8=
 
 "@types/node@^12.12.17":
   version "12.12.17"
@@ -38,6 +50,27 @@ find@^0.3.0:
   integrity sha1-QILo/I2DIPGjgrXk9SG5vFB3XLg=
   dependencies:
     traverse-chain "~0.1.0"
+
+fs-extra@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.npm.taobao.org/fs-extra/download/fs-extra-8.1.0.tgz#49d43c45a88cd9677668cb7be1b46efdb8d2e1c0"
+  integrity sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^4.0.0"
+    universalify "^0.1.0"
+
+graceful-fs@^4.1.6, graceful-fs@^4.2.0:
+  version "4.2.3"
+  resolved "https://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.2.3.tgz#4a12ff1b60376ef09862c2093edd908328be8423"
+  integrity sha1-ShL/G2A3bvCYYsIJPt2Qgyi+hCM=
+
+jsonfile@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+  integrity sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  optionalDependencies:
+    graceful-fs "^4.1.6"
 
 make-error@^1.1.1:
   version "1.3.5"
@@ -87,6 +120,11 @@ typescript@^3.7.3:
   version "3.7.3"
   resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
   integrity sha1-s2hAZooWRYpwJbnqv60Rtmq4XGk=
+
+universalify@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/universalify/download/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
+  integrity sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=
 
 yn@^3.0.0:
   version "3.1.1"

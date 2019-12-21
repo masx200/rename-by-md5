@@ -1,11 +1,18 @@
+import find from "find";
+import fs from "fs";
+import fsextra from "fs-extra";
+import md5file from "md5-file";
+import path from "path";
+const fspromise = fs.promises;
+async function loadjson(pathdir) {
+    const imageconfigbuffer = await fspromise.readFile(path.resolve(pathdir));
+    const config = JSON.parse(imageconfigbuffer.toString());
+    return config;
+}
 "use strict";
 process.on("unhandledRejection", err => {
     throw err;
 });
-import find from "find";
-import fs from "fs";
-import md5file from "md5-file";
-import path from "path";
 function md5FileAsPromised(filename) {
     return new Promise(function (resolve, reject) {
         md5file(filename, function (err, hash) {
@@ -18,7 +25,6 @@ function md5FileAsPromised(filename) {
         });
     });
 }
-const fspromise = fs.promises;
 function findfiles(pattern, root) {
     return new Promise((s, j) => {
         find
@@ -30,10 +36,10 @@ function findfiles(pattern, root) {
         });
     });
 }
-import renameconfig from "./rename-config.js";
-function start(extention, dirpa) {
+async function start(extention, dirpa) {
     const extreg = new RegExp("." + extention + "$");
     const dirpath = path.resolve(dirpa);
+    await fsextra.ensureDir(dirpath);
     console.log([extention, dirpath]);
     findfiles(extreg, dirpath).then(files => {
         console.log(files);
@@ -50,4 +56,7 @@ function start(extention, dirpa) {
         });
     });
 }
-start(renameconfig.extention, renameconfig.dir);
+loadjson("./rename-config.json").then(renameconfig => {
+    console.log(renameconfig);
+    start(renameconfig.extention, renameconfig.dir);
+});
