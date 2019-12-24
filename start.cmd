@@ -1,1 +1,1 @@
-yarn start --inspect
+node --inspect ./rename-by-md5.js 
