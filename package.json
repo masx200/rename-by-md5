@@ -2,7 +2,7 @@
   "type": "module",
   "types": "rename-by-md5.ts",
   "name": "@masx200/rename-by-md5",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "rename-by-md5.js",
   "license": "MIT",
   "scripts": {
