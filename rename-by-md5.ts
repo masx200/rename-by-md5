@@ -42,7 +42,7 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
 // import renameconfig from "./rename-config.js";
 let filesum = 0;
 let finishcount = 0;
-async function start(extention: string, dirpa: string) {
+async function start(extention: string, dirpa: string, keeporigin: boolean) {
   const extreg = new RegExp("." + extention + "$");
   const dirpath = path.resolve(dirpa);
   await fsextra.ensureDir(dirpath);
@@ -58,9 +58,13 @@ async function start(extention: string, dirpa: string) {
         md5FileAsPromised(file).then(hash => {
           s();
           console.log([file, hash]);
-          const newfilename = file
-            .replace(new RegExp("-" + hash, "g"), "")
-            .replace(extreg, `-${hash}.${extention}`);
+
+          const newfilename = keeporigin
+            ? file
+                .replace(new RegExp("-" + hash, "g"), "")
+                .replace(extreg, `-${hash}.${extention}`)
+            : path.resolve(path.dirname(file), `${hash}.${extention}`);
+
           fspromise.rename(file, newfilename).then(() => {
             finishcount++;
             console.log(["rename success", newfilename]);
@@ -76,8 +80,10 @@ async function start(extention: string, dirpa: string) {
 interface RENAMECONFIG {
   extention: string;
   dir: string;
+  keeporigin: boolean;
 }
 loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
   console.log(renameconfig);
-  start(renameconfig.extention, renameconfig.dir);
+  const { extention, dir, keeporigin } = renameconfig;
+  start(extention, dir, keeporigin);
 });

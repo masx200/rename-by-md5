@@ -38,7 +38,7 @@ function findfiles(pattern, root) {
 }
 let filesum = 0;
 let finishcount = 0;
-async function start(extention, dirpa) {
+async function start(extention, dirpa, keeporigin) {
     const extreg = new RegExp("." + extention + "$");
     const dirpath = path.resolve(dirpa);
     await fsextra.ensureDir(dirpath);
@@ -53,9 +53,11 @@ async function start(extention, dirpa) {
                 md5FileAsPromised(file).then(hash => {
                     s();
                     console.log([file, hash]);
-                    const newfilename = file
-                        .replace(new RegExp("-" + hash, "g"), "")
-                        .replace(extreg, `-${hash}.${extention}`);
+                    const newfilename = keeporigin
+                        ? file
+                            .replace(new RegExp("-" + hash, "g"), "")
+                            .replace(extreg, `-${hash}.${extention}`)
+                        : path.resolve(path.dirname(file), `${hash}.${extention}`);
                     fspromise.rename(file, newfilename).then(() => {
                         finishcount++;
                         console.log(["rename success", newfilename]);
@@ -69,5 +71,6 @@ async function start(extention, dirpa) {
 }
 loadjson("./rename-config.json").then((renameconfig) => {
     console.log(renameconfig);
-    start(renameconfig.extention, renameconfig.dir);
+    const { extention, dir, keeporigin } = renameconfig;
+    start(extention, dir, keeporigin);
 });

@@ -4,6 +4,8 @@
 
 递归查找输入文件夹`dir`的指定后缀名`extention`的图片
 
+配置参数中的`keeporigin`代表是否保留原文件名
+
 例子:
 
 对于没有使用`md5`命名的文件,在文件名后面添加`md5`
@@ -48,5 +50,6 @@ yarn run start
 interface RENAMECONFIG {
   extention: string;
   dir: string;
+  keeporigin: boolean;
 }
 ```
