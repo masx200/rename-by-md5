@@ -74,3 +74,4 @@ loadjson("./rename-config.json").then((renameconfig) => {
     const { extention, dir, keeporigin } = renameconfig;
     start(extention, dir, keeporigin);
 });
+//# sourceMappingURL=rename-by-md5.js.map
