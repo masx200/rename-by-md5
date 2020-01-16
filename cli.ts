@@ -30,11 +30,17 @@ function parseargs(args: string[]): Record<string, string> {
   //   }
 }
 const dirarg = parseargs(process.argv)["dir"];
-loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
-  //   console.log(renameconfig);
-  let { extention, /* dir, */ keeporigin } = renameconfig;
-  let dir = path.resolve(dirarg); //dirarg
-  console.log("dir:", dir);
+if (dirarg) {
+  loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
+    //   console.log(renameconfig);
+    let { extention, /* dir, */ keeporigin } = renameconfig;
+    let dir = path.resolve(dirarg); //dirarg
+    console.log("dir:", dir);
 
-  start(extention, dir, keeporigin);
-});
+    start(extention, dir, keeporigin);
+  });
+} else {
+  console.log("示例:");
+  console.log(`node ./cli.js --dir=D:\\baidupandownload`);
+  throw new Error("输入的参数有误!");
+}

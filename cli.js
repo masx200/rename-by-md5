@@ -16,10 +16,17 @@ function parseargs(args) {
     return 参数obj;
 }
 const dirarg = parseargs(process.argv)["dir"];
-loadjson("./rename-config.json").then((renameconfig) => {
-    let { extention, keeporigin } = renameconfig;
-    let dir = path.resolve(dirarg);
-    console.log("dir:", dir);
-    start(extention, dir, keeporigin);
-});
+if (dirarg) {
+    loadjson("./rename-config.json").then((renameconfig) => {
+        let { extention, keeporigin } = renameconfig;
+        let dir = path.resolve(dirarg);
+        console.log("dir:", dir);
+        start(extention, dir, keeporigin);
+    });
+}
+else {
+    console.log("示例:");
+    console.log(`node ./cli.js --dir=D:\\baidupandownload`);
+    throw new Error("输入的参数有误!");
+}
 //# sourceMappingURL=cli.js.map
