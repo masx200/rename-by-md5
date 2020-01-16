@@ -1,37 +1,37 @@
 {
-  "type": "module",
-  "types": "rename-by-md5.ts",
-  "name": "@masx200/rename-by-md5",
-  "version": "1.0.4",
-  "main": "rename-by-md5.js",
-  "license": "MIT",
-  "scripts": {
-    "watch": "tsc --watch",
-    "build": "tsc",
-    "start": " node  ./rename-by-md5.js --experimental-modules --experimental-json-modules"
-  },
-  "dependencies": {
-    "@types/find": "^0.2.1",
-    "@types/fs-extra": "^8.0.1",
-    "@types/md5-file": "^4.0.0",
-    "@types/node": "^12.12.17",
-    "find": "^0.3.0",
-    "fs-extra": "^8.1.0",
-    "md5-file": "^4.0.0",
-    "ts-node": "^8.5.4",
-    "tslib": "^1.10.0",
-    "typescript": "^3.7.3"
-  },
-  "devDependencies": {},
-  "keywords": [],
-  "author": "masx200 <34191203+masx200@users.noreply.github.com>",
-  "description": "批量使用文件的md5值给文件重命名",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/masx200/rename-by-md5.git"
-  },
-  "bugs": {
-    "url": "https://github.com/masx200/rename-by-md5/issues"
-  },
-  "homepage": "https://github.com/masx200/rename-by-md5#readme"
+    "type": "module",
+    "types": "rename-by-md5.ts",
+    "name": "@masx200/rename-by-md5",
+    "version": "1.0.5",
+    "main": "rename-by-md5.js",
+    "license": "MIT",
+    "scripts": {
+        "watch": "tsc --watch",
+        "build": "tsc",
+        "start": " node  ./rename-by-md5.js --experimental-modules --experimental-json-modules"
+    },
+    "dependencies": {
+        "@types/find": "^0.2.1",
+        "@types/fs-extra": "^8.0.1",
+        "@types/md5-file": "^4.0.0",
+        "@types/node": "^12.12.17",
+        "find": "^0.3.0",
+        "fs-extra": "^8.1.0",
+        "md5-file": "^4.0.0",
+        "ts-node": "^8.5.4",
+        "tslib": "^1.10.0",
+        "typescript": "^3.7.3"
+    },
+    "devDependencies": {},
+    "keywords": [],
+    "author": "masx200 <34191203+masx200@users.noreply.github.com>",
+    "description": "批量使用文件的md5值给文件重命名",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/masx200/rename-by-md5.git"
+    },
+    "bugs": {
+        "url": "https://github.com/masx200/rename-by-md5/issues"
+    },
+    "homepage": "https://github.com/masx200/rename-by-md5#readme"
 }

@@ -1,10 +1,12 @@
-import find from "find";
-import fs from "fs";
-import fsextra from "fs-extra";
-import md5file from "md5-file";
-import path from "path";
+import find from 'find';
+import fs from 'fs';
+import fsextra from 'fs-extra';
+import md5file from 'md5-file';
+import path from 'path';
+import process from 'process';
+
 const fspromise = fs.promises;
-async function loadjson(pathdir: string) {
+export async function loadjson(pathdir: string) {
   const imageconfigbuffer = await fspromise.readFile(path.resolve(pathdir));
   const config = JSON.parse(imageconfigbuffer.toString());
   return config;
@@ -42,7 +44,11 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
 // import renameconfig from "./rename-config.js";
 let filesum = 0;
 let finishcount = 0;
-async function start(extention: string, dirpa: string, keeporigin: boolean) {
+export async function start(
+  extention: string,
+  dirpa: string,
+  keeporigin: boolean
+) {
   const extreg = new RegExp("." + extention + "$");
   const dirpath = path.resolve(dirpa);
   await fsextra.ensureDir(dirpath);
@@ -77,13 +83,14 @@ async function start(extention: string, dirpa: string, keeporigin: boolean) {
     }, Promise.resolve());
   });
 }
-interface RENAMECONFIG {
+export interface RENAMECONFIG {
   extention: string;
   dir: string;
   keeporigin: boolean;
 }
-loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
-  console.log(renameconfig);
-  const { extention, dir, keeporigin } = renameconfig;
-  start(extention, dir, keeporigin);
-});
+// /* loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
+//   console.log(renameconfig);
+//   const { extention, dir, keeporigin } = renameconfig;
+//   start(extention, dir, keeporigin);
+// });
+//*/

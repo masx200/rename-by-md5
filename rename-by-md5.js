@@ -1,10 +1,11 @@
-import find from "find";
-import fs from "fs";
-import fsextra from "fs-extra";
-import md5file from "md5-file";
-import path from "path";
+import find from 'find';
+import fs from 'fs';
+import fsextra from 'fs-extra';
+import md5file from 'md5-file';
+import path from 'path';
+import process from 'process';
 const fspromise = fs.promises;
-async function loadjson(pathdir) {
+export async function loadjson(pathdir) {
     const imageconfigbuffer = await fspromise.readFile(path.resolve(pathdir));
     const config = JSON.parse(imageconfigbuffer.toString());
     return config;
@@ -38,7 +39,7 @@ function findfiles(pattern, root) {
 }
 let filesum = 0;
 let finishcount = 0;
-async function start(extention, dirpa, keeporigin) {
+export async function start(extention, dirpa, keeporigin) {
     const extreg = new RegExp("." + extention + "$");
     const dirpath = path.resolve(dirpa);
     await fsextra.ensureDir(dirpath);
@@ -69,9 +70,4 @@ async function start(extention, dirpa, keeporigin) {
         }, Promise.resolve());
     });
 }
-loadjson("./rename-config.json").then((renameconfig) => {
-    console.log(renameconfig);
-    const { extention, dir, keeporigin } = renameconfig;
-    start(extention, dir, keeporigin);
-});
 //# sourceMappingURL=rename-by-md5.js.map

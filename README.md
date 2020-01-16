@@ -53,3 +53,9 @@ interface RENAMECONFIG {
   keeporigin: boolean;
 }
 ```
+
+命令行脚本执行示例
+
+```powershell
+node ./cli.js --dir=D:\baidupandownload\
+```
