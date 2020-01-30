@@ -45,11 +45,12 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
 let filesum = 0;
 let finishcount = 0;
 export async function start(
-  extention: string,
+  extention: string[],
   dirpa: string,
   keeporigin: boolean
 ) {
-  const extreg = new RegExp("." + extention + "$");
+  const extreg = new RegExp(".(" + extention.join("|") + ")$")
+//const extreg = new RegExp("." + extention + "$");
   const dirpath = path.resolve(dirpa);
   await fsextra.ensureDir(dirpath);
   console.log([extention, dirpath]);
@@ -84,7 +85,7 @@ export async function start(
   });
 }
 export interface RENAMECONFIG {
-  extention: string;
+  extention: string[];
   dir: string;
   keeporigin: boolean;
 }
