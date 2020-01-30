@@ -48,7 +48,7 @@ yarn run start
 
 ```ts
 interface RENAMECONFIG {
-  extention: [string];
+  extention: string[];
   dir: string;
   keeporigin: boolean;
 }
