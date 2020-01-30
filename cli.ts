@@ -16,18 +16,7 @@ function parseargs(args: string[]): Record<string, string> {
       参数obj[v!["key"]] = v!["value"];
     });
   return 参数obj;
-  // .reduce((a, v) => {
-  //   return {
-  //     ...a,
-  //     ...{ [v["key"]]: v["value"] }
-  //   };
-  // }, {});
-  //   } catch (error) {
-  //     console.log(process.argv);
-  //     console.error("\n输入的参数有误!\n");
-  //     console.error(error);
-  //     throw Error("输入的参数有误!");
-  //   }
+  
 }
 const dirarg = parseargs(process.argv)["dir"];
 if (dirarg) {
