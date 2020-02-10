@@ -1,9 +1,9 @@
-import find from 'find';
-import fs from 'fs';
-import fsextra from 'fs-extra';
-import md5file from 'md5-file';
-import path from 'path';
-import process from 'process';
+import find from "find";
+import fs from "fs";
+import fsextra from "fs-extra";
+import md5file from "md5-file";
+import path from "path";
+import process from "process";
 const fspromise = fs.promises;
 export async function loadjson(pathdir) {
     const imageconfigbuffer = await fspromise.readFile(path.resolve(pathdir));
@@ -28,11 +28,9 @@ function md5FileAsPromised(filename) {
 }
 function findfiles(pattern, root) {
     return new Promise((s, j) => {
-        find
-            .file(pattern, root, files => {
+        find.file(pattern, root, files => {
             s(files);
-        })
-            .error(e => {
+        }).error(e => {
             j(e);
         });
     });
@@ -40,7 +38,7 @@ function findfiles(pattern, root) {
 let filesum = 0;
 let finishcount = 0;
 export async function start(extention, dirpa, keeporigin) {
-    const extreg = new RegExp("." + extention + "$");
+    const extreg = new RegExp(".(" + extention.join("|") + ")$", "i");
     const dirpath = path.resolve(dirpa);
     await fsextra.ensureDir(dirpath);
     console.log([extention, dirpath]);

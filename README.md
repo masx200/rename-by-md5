@@ -12,8 +12,8 @@
 
 ```js
 [
-  "D:\\baidupandownload\\qqqqqqqq.webp",
-  "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp"
+    "D:\\baidupandownload\\qqqqqqqq.webp",
+    "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp"
 ];
 ```
 
@@ -21,8 +21,8 @@
 
 ```js
 [
-  "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp",
-  "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp"
+    "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp",
+    "D:\\baidupandownload\\qqqqqqqq-d41d8cd98f00b204e9800998ecf8427e.webp"
 ];
 ```
 
@@ -48,9 +48,9 @@ yarn run start
 
 ```ts
 interface RENAMECONFIG {
-  extention: string[];
-  dir: string;
-  keeporigin: boolean;
+    extention: string[];
+    dir: string;
+    keeporigin: boolean;
 }
 ```
 
