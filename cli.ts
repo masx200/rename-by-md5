@@ -19,8 +19,10 @@ function parseargs(args: string[]): Record<string, string> {
     return 参数obj;
 }
 const dirarg = parseargs(process.argv)["dir"];
+const filenameurl = import.meta.url;
+const jsonurl = new URL("./rename-config.json", filenameurl);
 if (dirarg) {
-    loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
+    loadjson(jsonurl).then((renameconfig: RENAMECONFIG) => {
         let { extention, keeporigin } = renameconfig;
         let dir = path.resolve(dirarg);
         console.log("dir:", dir);

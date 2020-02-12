@@ -6,8 +6,8 @@ import path from "path";
 import process from "process";
 
 const fspromise = fs.promises;
-export async function loadjson(pathdir: string) {
-    const imageconfigbuffer = await fspromise.readFile(path.resolve(pathdir));
+export async function loadjson(pathdir: string | URL) {
+    const imageconfigbuffer = await fspromise.readFile(pathdir);
     const config = JSON.parse(imageconfigbuffer.toString());
     return config;
 }
