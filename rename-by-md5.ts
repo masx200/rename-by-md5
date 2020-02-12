@@ -37,9 +37,7 @@ function findfiles(pattern: string | RegExp, root: string): Promise<string[]> {
         });
     });
 }
-// const extention = "webp";
-// const dirpa = "D:\\baidupandownload";
-// import renameconfig from "./rename-config.js";
+
 let filesum = 0;
 let finishcount = 0;
 export async function start(
@@ -48,7 +46,7 @@ export async function start(
     keeporigin: boolean
 ) {
     const extreg = new RegExp(".(" + extention.join("|") + ")$", "i");
-    //const extreg = new RegExp("." + extention + "$");
+    
     const dirpath = path.resolve(dirpa);
     await fsextra.ensureDir(dirpath);
     console.log([extention, dirpath]);
@@ -81,7 +79,7 @@ export async function start(
                     });
                 });
             });
-            // files.forEach(file => {
+
         }, Promise.resolve());
     });
 }
@@ -90,9 +88,3 @@ export interface RENAMECONFIG {
     dir: string;
     keeporigin: boolean;
 }
-// /* loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
-//   console.log(renameconfig);
-//   const { extention, dir, keeporigin } = renameconfig;
-//   start(extention, dir, keeporigin);
-// });
-//*/

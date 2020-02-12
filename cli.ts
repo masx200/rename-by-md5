@@ -11,7 +11,8 @@ function parseargs(args: string[]): Record<string, string> {
         .filter(Boolean)
         .map(a => a!.groups)
         .filter(Boolean)
-        .forEach(v => {
+        .forEach((v:Record<string, string>) => {
+        	
             参数obj[v!["key"]] = v!["value"];
         });
     return 参数obj;
@@ -19,14 +20,15 @@ function parseargs(args: string[]): Record<string, string> {
 const dirarg = parseargs(process.argv)["dir"];
 if (dirarg) {
     loadjson("./rename-config.json").then((renameconfig: RENAMECONFIG) => {
-        //   console.log(renameconfig);
-        let { extention, /* dir, */ keeporigin } = renameconfig;
-        let dir = path.resolve(dirarg); //dirarg
+        
+        let { extention,  keeporigin } = renameconfig;
+        let dir = path.resolve(dirarg); 
         console.log("dir:", dir);
 
         start(extention, dir, keeporigin);
     });
 } else {
+	console.log("使用md5为文件重命名");
     console.log("示例:");
     console.log(`node ./cli.js --dir=D:\\baidupandownload`);
     throw new Error("输入的参数有误!");

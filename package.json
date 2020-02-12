@@ -2,14 +2,14 @@
     "type": "module",
     "types": "rename-by-md5.ts",
     "name": "@masx200/rename-by-md5",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "main": "rename-by-md5.js",
     "license": "MIT",
     "scripts": {
         "watch": "tsc --watch",
         "prettier": "prettier *.json --write && prettier *.md --write&&prettier --parser=typescript --write ./**/*.ts",
         "build": "tsc",
-        "start": " node --experimental-modules --experimental-json-modules  ./rename-by-md5.js "
+        "start": " node --experimental-modules --experimental-json-modules  ./cli.js "
     },
     "dependencies": {
         "@types/find": "^0.2.1",
