@@ -46,7 +46,7 @@ export async function start(
     keeporigin: boolean
 ) {
     const extreg = new RegExp(".(" + extention.join("|") + ")$", "i");
-    
+
     const dirpath = path.resolve(dirpa);
     await fsextra.ensureDir(dirpath);
     console.log([extention, dirpath]);
@@ -79,7 +79,6 @@ export async function start(
                     });
                 });
             });
-
         }, Promise.resolve());
     });
 }
