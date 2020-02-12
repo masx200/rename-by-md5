@@ -1,6 +1,7 @@
 {
+    "module": "rename-by-md5.js",
     "type": "module",
-    "types": "rename-by-md5.ts",
+    "types": "rename-by-md5.d.ts",
     "name": "@masx200/rename-by-md5",
     "version": "1.0.7",
     "main": "rename-by-md5.js",
