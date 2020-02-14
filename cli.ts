@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 import path from "path";
 import process from "process";
-import { loadjson, RENAMECONFIG, start } from "./rename-by-md5.js";
-import { parseargs } from './parse-args.js';
-
+import { RENAMECONFIG } from "./RENAMECONFIG";
+import { start } from "./start.js";
+import { loadjson } from "./loadjson.js";
+import { parseargs } from "./parse-args.js";
 
 const dirarg = parseargs(process.argv.slice(2))["dir"];
 const filenameurl = import.meta.url;
@@ -17,8 +18,8 @@ if (dirarg) {
         start(extention, dir, keeporigin);
     });
 } else {
-    console.log("使用md5为文件重命名");
-    console.log("示例:");
-    console.log(`node ./cli.js --dir=D:\\baidupandownload`);
+    console.error("使用md5为文件重命名");
+    console.error("示例:");
+    console.error(`node ./cli.js --dir=D:\\baidupandownload`);
     throw new Error("输入的参数有误!");
 }

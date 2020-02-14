@@ -1,7 +1,5 @@
-export declare function loadjson(pathdir: string | URL): Promise<any>;
-export declare function start(extention: string[], dirpa: string, keeporigin: boolean): Promise<void>;
-export interface RENAMECONFIG {
-    extention: string[];
-    dir: string;
-    keeporigin: boolean;
-}
+/// <reference types="node" />
+import fs from "fs";
+import { start } from "./start.js";
+export declare const fspromise: typeof fs.promises;
+export { start };
