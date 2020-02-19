@@ -23,14 +23,15 @@ export async function start(
             return new Promise(s => {
                 md5FileAsPromised(file).then(hash => {
                     s();
+                    const 文件扩展名 = path.extname(file);
                     console.log(["获取md5成功", file, hash]);
                     const newfilename = keeporigin
                         ? file
                               .replace(new RegExp("-" + hash, "g"), "")
-                              .replace(extreg, `-${hash}.${extention}`)
+                              .replace(extreg, `-${hash}${文件扩展名}`)
                         : path.resolve(
                               path.dirname(file),
-                              `${hash}.${extention}`
+                              `${hash}${文件扩展名}`
                           );
                     fspromise.rename(file, newfilename).then(() => {
                         finishcount++;

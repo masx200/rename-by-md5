@@ -1,6 +1,7 @@
 {
+    "include": ["./lib/*.ts"],
     "compilerOptions": {
-        "sourceMap": true,
+        "sourceMap": false,
         "moduleResolution": "node",
         "pretty": true,
         "resolveJsonModule": true,
