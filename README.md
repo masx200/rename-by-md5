@@ -55,5 +55,5 @@ node ./cli.js --dir=D:\baidupandownload\
 使用方法
 
 ```shell
-npx @masx200/rename-by-md5  "--dir=C:\Program Files (x86)\WebP Codec\Example Files"
+npx @masx200/rename-by-md5  "--dir=C:\Example Files"
 ```
