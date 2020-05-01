@@ -1,4 +1,5 @@
-{"bin": "./lib/rename-by-md5.js",
+{
+    "bin": "./lib/rename-by-md5.js",
     "module": "./lib/rename-by-md5.js",
     "type": "module",
     "types": "./lib/rename-by-md5.d.ts",
