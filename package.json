@@ -1,9 +1,9 @@
-{
+{"bin": "./lib/rename-by-md5.js",
     "module": "./lib/rename-by-md5.js",
     "type": "module",
     "types": "./lib/rename-by-md5.d.ts",
     "name": "@masx200/rename-by-md5",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "main": "./lib/rename-by-md5.js",
     "license": "MIT",
     "scripts": {
