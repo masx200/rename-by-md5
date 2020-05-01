@@ -7,7 +7,7 @@
     "type": "module",
     "types": "./lib/rename-by-md5.d.ts",
     "name": "@masx200/rename-by-md5",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "main": "./lib/rename-by-md5.js",
     "license": "MIT",
     "scripts": {
@@ -17,18 +17,19 @@
         "start": " node --experimental-modules --experimental-json-modules  ./lib/cli.js "
     },
     "dependencies": {
+        "find": "^0.3.0",
+        "fs-extra": "^8.1.0",
+        "md5-file": "^4.0.0"
+    },
+    "devDependencies": {
+        "prettier": "^1.19.1",
+        "tslib": "^1.10.0",
+        "typescript": "^3.8.3",
         "@types/find": "^0.2.1",
         "@types/fs-extra": "^8.0.1",
         "@types/md5-file": "^4.0.1",
-        "@types/node": "^12.12.17",
-        "find": "^0.3.0",
-        "fs-extra": "^8.1.0",
-        "md5-file": "^4.0.0",
-        "prettier": "^1.19.1",
-        "tslib": "^1.10.0",
-        "typescript": "^3.8.3"
+        "@types/node": "^12.12.17"
     },
-    "devDependencies": {},
     "keywords": [],
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
     "description": "批量使用文件的md5值给文件重命名",
