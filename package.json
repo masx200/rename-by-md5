@@ -1,4 +1,7 @@
 {
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
+    },
     "bin": "./lib/cli.js",
     "module": "./lib/rename-by-md5.js",
     "type": "module",

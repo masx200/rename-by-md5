@@ -6,6 +6,12 @@
 
 对于使用`md5`命名的文件,在文件名后面不重复添加`md5`
 
+安装方法
+
+```shell
+npm i -g @masx200/rename-by-md5
+```
+
 安装依赖
 
 ```
@@ -44,4 +50,10 @@ interface RENAMECONFIG {
 
 ```powershell
 node ./cli.js --dir=D:\baidupandownload\
+```
+
+使用方法
+
+```shell
+npx @masx200/rename-by-md5  "--dir=C:\Program Files (x86)\WebP Codec\Example Files"
 ```
