@@ -14,14 +14,14 @@ export async function start(
     await fsextra.ensureDir(dirpath);
     console.log([extention, dirpath]);
     console.log("递归查找图片...", dirpath);
-    findfiles(extreg, dirpath).then(files => {
+    findfiles(extreg, dirpath).then((files) => {
         console.log(files);
         filesum = files.length;
         /* Error: EMFILE: too many open files,  */
         files.reduce(async (prom: Promise<any>, file) => {
             await prom;
-            return new Promise(s => {
-                md5FileAsPromised(file).then(hash => {
+            return new Promise((s) => {
+                md5FileAsPromised(file).then((hash) => {
                     s();
                     const 文件扩展名 = path.extname(file);
                     console.log(["获取md5成功", file, hash]);
@@ -36,8 +36,9 @@ export async function start(
                     fspromise.rename(file, newfilename).then(() => {
                         finishcount++;
                         console.log(["rename success!", newfilename]);
-                        process.title = `${(finishcount / filesum) *
-                            100}% ${finishcount} / ${filesum} `;
+                        process.title = `${
+                            (finishcount / filesum) * 100
+                        }% ${finishcount} / ${filesum} `;
                         console.log("处理进度" + `${finishcount} / ${filesum}`);
                     });
                 });
