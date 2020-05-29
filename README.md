@@ -55,7 +55,7 @@ interface RENAMECONFIG {
 命令行脚本执行示例
 
 ```powershell
-node ./cli.js --dir=D:\baidupandownload\
+node ./cli.js "--dir=D:\baidupandownload\"
 ```
 
 使用方法
