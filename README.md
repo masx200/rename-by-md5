@@ -6,7 +6,7 @@
 
 对于使用`md5`命名的文件,在文件名后面不重复添加`md5`
 
-安装方法
+# 安装方法
 
 ```shell
 npm i -g @masx200/rename-by-md5
@@ -30,6 +30,8 @@ yarn build
 yarn  start
 ```
 
+# 配置参数
+
 在"rename-config.json"文件中配置参数
 
 递归查找输入文件夹`dir`的
@@ -45,6 +47,10 @@ interface RENAMECONFIG {
     keeporigin: boolean;
 }
 ```
+
+# 命令行参数
+
+必须参数 dir:类型 string ,指定文件夹目录
 
 命令行脚本执行示例
 

@@ -1,0 +1,118 @@
+dependencies:
+  find: 0.3.0
+  fs-extra: 8.1.0
+  md5-file: 4.0.0
+devDependencies:
+  '@types/find': 0.2.1
+  '@types/fs-extra': 8.1.1
+  '@types/md5-file': 4.0.2
+  '@types/node': 12.12.42
+  prettier: 2.0.5
+  tslib: 1.13.0
+  typescript: 3.9.3
+lockfileVersion: 5.1
+packages:
+  /@types/find/0.2.1:
+    dev: true
+    resolution:
+      integrity: sha1-6NDXqVK+LZB2jW+N1/LmYwuyYPg=
+      tarball: '@types/find/download/@types/find-0.2.1.tgz'
+  /@types/fs-extra/8.1.1:
+    dependencies:
+      '@types/node': 12.12.42
+    dev: true
+    resolution:
+      integrity: sha1-HknyLQmqRuGbUcCwE8tj0NkjoGg=
+      tarball: '@types/fs-extra/download/@types/fs-extra-8.1.1.tgz'
+  /@types/md5-file/4.0.2:
+    dev: true
+    resolution:
+      integrity: sha1-xyQeiPSqFyGMd0vvsPw08z8h/jY=
+      tarball: '@types/md5-file/download/@types/md5-file-4.0.2.tgz'
+  /@types/node/12.12.42:
+    dev: true
+    resolution:
+      integrity: sha1-0NEUkza9B1QN0epXZpKCnVdd7DQ=
+      tarball: '@types/node/download/@types/node-12.12.42.tgz'
+  /find/0.3.0:
+    dependencies:
+      traverse-chain: 0.1.0
+    dev: false
+    resolution:
+      integrity: sha1-QILo/I2DIPGjgrXk9SG5vFB3XLg=
+      tarball: find/download/find-0.3.0.tgz
+  /fs-extra/8.1.0:
+    dependencies:
+      graceful-fs: 4.2.4
+      jsonfile: 4.0.0
+      universalify: 0.1.2
+    dev: false
+    engines:
+      node: '>=6 <7 || >=8'
+    resolution:
+      integrity: sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=
+      tarball: fs-extra/download/fs-extra-8.1.0.tgz
+  /graceful-fs/4.2.4:
+    dev: false
+    resolution:
+      integrity: sha1-Ila94U02MpWMRl68ltxGfKB6Kfs=
+      tarball: graceful-fs/download/graceful-fs-4.2.4.tgz?cache=0&sync_timestamp=1588086876757&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fgraceful-fs%2Fdownload%2Fgraceful-fs-4.2.4.tgz
+  /jsonfile/4.0.0:
+    dev: false
+    optionalDependencies:
+      graceful-fs: 4.2.4
+    resolution:
+      integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+      tarball: jsonfile/download/jsonfile-4.0.0.tgz
+  /md5-file/4.0.0:
+    dev: false
+    engines:
+      node: '>=6.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-8/e6Hi3RFE1b8d5pjQ5fRKRAlYQ=
+      tarball: md5-file/download/md5-file-4.0.0.tgz
+  /prettier/2.0.5:
+    dev: true
+    engines:
+      node: '>=10.13.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-1tVigkVSQ/L5LMFxZpLAiqMVItQ=
+      tarball: prettier/download/prettier-2.0.5.tgz
+  /traverse-chain/0.1.0:
+    dev: false
+    resolution:
+      integrity: sha1-YdvC1Ttp/2CRoSoWj9fUMxB+QPE=
+      tarball: traverse-chain/download/traverse-chain-0.1.0.tgz
+  /tslib/1.13.0:
+    dev: true
+    resolution:
+      integrity: sha1-yIHhPMcBWJTtkUhi0nZDb6mkcEM=
+      tarball: tslib/download/tslib-1.13.0.tgz
+  /typescript/3.9.3:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha1-06yIg6l8JhOeQt9ek+7s4z1hC4o=
+      tarball: typescript/download/typescript-3.9.3.tgz
+  /universalify/0.1.2:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=
+      tarball: universalify/download/universalify-0.1.2.tgz
+specifiers:
+  '@types/find': ^0.2.1
+  '@types/fs-extra': ^8.0.1
+  '@types/md5-file': ^4.0.1
+  '@types/node': ^12.12.17
+  find: ^0.3.0
+  fs-extra: ^8.1.0
+  md5-file: ^4.0.0
+  prettier: ^2.0.5
+  tslib: ^1.10.0
+  typescript: ^3.8.3
