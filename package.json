@@ -12,7 +12,7 @@
     "license": "MIT",
     "scripts": {
         "watch": "tsc --watch",
-        "prettier": "prettier *.json  *.md --write&&prettier --parser=typescript --write ./**/*.ts",
+        "prettier": "prettier *.json  *.md --write ./**/*.ts",
         "build": "tsc",
         "start": " node --experimental-modules --experimental-json-modules  ./lib/cli.js "
     },
