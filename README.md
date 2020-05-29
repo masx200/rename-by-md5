@@ -52,7 +52,9 @@ interface RENAMECONFIG {
 
 必须参数 dir:类型 string ,指定文件夹目录
 
-命令行脚本执行示例
+可选参数 extention:类型 string ,指定文件扩展名
+
+# 命令行脚本执行示例
 
 ```powershell
 node ./cli.js "--dir=D:\baidupandownload\"
