@@ -24,12 +24,12 @@ const files=await  findfiles(extreg, dirpath)
         filesum = files.length;
         /* Error: EMFILE: too many open files,  */
         
-        await handlerename(files)
+        await handlerename(files,keeporigin)
    
 }
 let filesum = 0;
 let finishcount = 0;
-async function handlerename(files){
+async function handlerename(files :string[],keeporigin: boolean){
 
      for(let file of files){
 
