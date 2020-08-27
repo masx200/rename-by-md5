@@ -28,6 +28,10 @@ if (dirarg) {
 可选参数 extention:类型 string ,指定文件扩展名`);
     console.error("示例:");
     console.error(`node ./cli.js --dir=D:\\baidupandownload`);
+
+    console.error(
+        `npx @masx200/rename-by-md5 --dir=D:\\baidupandownload --extention=jpg`
+    );
     console.error("输入的参数有误!");
     process.exit(1);
 }
