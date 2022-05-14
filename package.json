@@ -3,17 +3,18 @@
         "registry": "https://registry.npmjs.org"
     },
     "bin": "./lib/cli.js",
-    "module": "./lib/rename-by-md5.js",
+    "module": "./lib/index.js",
     "type": "module",
-    "types": "./lib/rename-by-md5.d.ts",
+    "types": "./lib/index.d.ts",
     "name": "@masx200/rename-by-md5",
     "version": "1.1.4",
-    "main": "./lib/rename-by-md5.js",
+    "main": "./lib/index.js",
     "license": "MIT",
     "scripts": {
         "format": "prettier *.json  *.md --write **/*.ts **/*.js",
         "build": "tsc",
-        "start": " node --experimental-modules --experimental-json-modules  ./lib/cli.js "
+        "start": " node --experimental-modules --experimental-json-modules  ./lib/cli.js ",
+        "test": "vitest run"
     },
     "dependencies": {
         "find": "^0.3.0",
@@ -21,6 +22,7 @@
         "md5-file": "^5.0.0"
     },
     "devDependencies": {
+        "vitest": "^0.12.6",
         "@types/find": "^0.2.1",
         "@types/fs-extra": "^8.0.1",
         "@types/md5-file": "^5.0.0",
