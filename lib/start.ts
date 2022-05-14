@@ -5,7 +5,7 @@ import { handlerename } from "./handlerename";
 export async function start(
     extention: string[],
     dirpa: string,
-    keeporigin: boolean
+    keeporigin: boolean = false
 ) {
     const extreg = new RegExp(".(" + extention.join("|") + ")$", "i");
     const dirpath = path.resolve(dirpa);

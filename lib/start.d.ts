@@ -1,5 +1,5 @@
 export declare function start(
     extention: string[],
     dirpa: string,
-    keeporigin: boolean
+    keeporigin?: boolean
 ): Promise<void>;
