@@ -14,10 +14,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/md5-file@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.npmjs.org/@types/md5-file/-/md5-file-4.0.1.tgz#5e6cfb7949dc375049b8f6fd8f91adacfc176c63"
-  integrity sha512-uK6vlo/LJp6iNWinpSzZwMe8Auzs0UYxesm7OGfQS3oz6PJciHtrKcqVOGk4wjYKawrl234vwNWvHyXH1ZzRyQ==
+"@types/md5-file@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@types/md5-file/-/md5-file-5.0.0.tgz#aa0ab300c468378a1eb63f62f25d42cb977488d6"
+  integrity sha512-b5wGwzjovLIcHNNmxT9u8pNumt1vxZ/+tRIpe10R6ZriTipq8NqQIGH95rC7gn4PlZR6R2Rr7hNavTW7n5GQ3Q==
+  dependencies:
+    md5-file "*"
 
 "@types/node@*":
   version "13.7.1"
@@ -57,10 +59,10 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-md5-file@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/md5-file/-/md5-file-4.0.0.tgz#f3f7ba1e2dd1144d5bf1de698d0e5f44a4409584"
-  integrity sha512-UC0qFwyAjn4YdPpKaDNw6gNxRf7Mcx7jC1UGCY4boCzgvU2Aoc1mOGzTtrjjLKhM5ivsnhoKpQVxKPp+1j1qwg==
+md5-file@*, md5-file@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/md5-file/-/md5-file-5.0.0.tgz#e519f631feca9c39e7f9ea1780b63c4745012e20"
+  integrity sha512-xbEFXCYVWrSx/gEKS1VPlg84h/4L20znVIulKw6kMfmBUAZNAnF00eczz9ICMl+/hjQGo5KSXRxbL/47X3rmMw==
 
 prettier@^2.0.5:
   version "2.0.5"
