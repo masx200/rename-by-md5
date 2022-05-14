@@ -11,7 +11,7 @@
     "main": "./lib/rename-by-md5.js",
     "license": "MIT",
     "scripts": {
-        "prettier": "prettier *.json  *.md --write **/*.ts **/*.js",
+        "format": "prettier *.json  *.md --write **/*.ts **/*.js",
         "build": "tsc",
         "start": " node --experimental-modules --experimental-json-modules  ./lib/cli.js "
     },
