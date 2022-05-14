@@ -1,7 +1,7 @@
 import fsextra from "fs-extra";
 import path from "path";
 import { findfiles } from "./findfiles.js";
-import { handlerename } from "./handlerename";
+import { handlerename } from "./handlerename.js";
 export async function start(
     extention: string[],
     dirpa: string,
