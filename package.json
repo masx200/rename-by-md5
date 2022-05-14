@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "find": "^0.3.0",
-        "fs-extra": "^8.1.0",
+        "fs-extra": "^10.1.0",
         "md5-file": "^5.0.0"
     },
     "devDependencies": {
