@@ -63,7 +63,7 @@ node ./cli.js "--dir=D:\baidupandownload\"
 使用方法
 
 ```shell
-npx @masx200/rename-by-md5  "--dir=C:\Example Files"
+npx @masx200/rename-by-md5  "--dir=C:\Example Files" "--extention=jpg,webp"
 ```
 
 ```shell
