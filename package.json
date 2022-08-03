@@ -30,7 +30,7 @@
         "prettier": "^2.0.5",
         "tslib": "^2.0.1",
         "typescript": "^4.0.2",
-        "vitest": "^0.15.2"
+        "vitest": "^0.20.3"
     },
     "keywords": [],
     "author": "masx200 <34191203+masx200@users.noreply.github.com>",
