@@ -19,7 +19,7 @@
     "dependencies": {
         "@masx200/mini-cli-args-parser": "^1.0.5",
         "find": "^0.3.0",
-        "fs-extra": "^10.1.0",
+        "fs-extra": "^11.0.0",
         "md5-file": "^5.0.0"
     },
     "devDependencies": {
